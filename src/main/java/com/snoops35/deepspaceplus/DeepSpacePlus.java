@@ -41,8 +41,5 @@ public class DeepSpacePlus
     }
 
     @EventHandler
-    public void serverInit(FMLServerStartingEvent event)
-    {
-
-    }
+    public void serverInit(FMLServerStartingEvent event) {}
 }
