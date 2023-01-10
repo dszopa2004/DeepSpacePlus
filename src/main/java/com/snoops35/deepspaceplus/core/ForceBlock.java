@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 public class ForceBlock extends Block implements IHasModel
 {
-    public static final AxisAlignedBB FORCE_COLLISION_AABB = new AxisAlignedBB(0.001,0.001,0.001,0.999,0.999,0.999);
+    public static final AxisAlignedBB FORCE_COLLISION_AABB = new AxisAlignedBB(0.999,0.999,0.999,0.999,0.999,0.999);
 
     public ForceBlock(String name, Material material)
     {
