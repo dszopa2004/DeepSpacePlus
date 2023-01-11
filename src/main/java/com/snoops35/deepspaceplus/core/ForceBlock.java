@@ -59,18 +59,19 @@ public class ForceBlock extends Block implements IHasModel
     {
         EnumFacing playerFacing = entityIn.getHorizontalFacing();
         double pushBack = 5;
+        double height = 1;
         switch(playerFacing) {
             case EAST:
-                entityIn.addVelocity(-pushBack, 0, 0);
+                entityIn.addVelocity(-pushBack, height, 0);
                 break;
             case WEST:
-                entityIn.addVelocity(pushBack, 0, 0);
+                entityIn.addVelocity(pushBack, height, 0);
                 break;
             case NORTH:
-                entityIn.addVelocity(0, 0, pushBack);
+                entityIn.addVelocity(0, height, pushBack);
                 break;
             case SOUTH:
-                entityIn.addVelocity(0, 0, -pushBack);
+                entityIn.addVelocity(0, height, -pushBack);
                 break;
         }
     }
