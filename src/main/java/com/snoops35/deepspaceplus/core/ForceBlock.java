@@ -12,6 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -21,7 +22,7 @@ import javax.annotation.Nullable;
 
 public class ForceBlock extends Block implements IHasModel
 {
-    public static final AxisAlignedBB FORCE_COLLISION_AABB = new AxisAlignedBB(0.999,0.999,0.999,0.999,0.999,0.999);
+    public static final AxisAlignedBB FORCE_COLLISION_AABB = new AxisAlignedBB(1,1,1,1,1,1);
 
     public ForceBlock(String name, Material material)
     {
@@ -51,14 +52,29 @@ public class ForceBlock extends Block implements IHasModel
 
     @Nullable
     @Override
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-        return FORCE_COLLISION_AABB;
-    }
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) { return FORCE_COLLISION_AABB; }
 
     @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-        entityIn.addVelocity(1,1,1);
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+    {
+        EnumFacing playerFacing = entityIn.getHorizontalFacing();
+        double pushBack = 5;
+        switch(playerFacing) {
+            case EAST:
+                entityIn.addVelocity(-pushBack, 0, 0);
+                break;
+            case WEST:
+                entityIn.addVelocity(pushBack, 0, 0);
+                break;
+            case NORTH:
+                entityIn.addVelocity(0, 0, pushBack);
+                break;
+            case SOUTH:
+                entityIn.addVelocity(0, 0, -pushBack);
+                break;
+        }
     }
+
 
     @Override
     public void registerModels() { DeepSpacePlus.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory"); }
