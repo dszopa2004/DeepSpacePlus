@@ -2,14 +2,15 @@ package com.snoops35.deepspaceplus.utils.handlers;
 
 import com.snoops35.deepspaceplus.init.BlockInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
+import com.snoops35.deepspaceplus.init.PotionInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class RegistryHandler
@@ -46,7 +47,10 @@ public class RegistryHandler
         }
     }
     
-    public static void preInitRegistries() {}
+    public static void preInitRegistries()
+    {
+        PotionInit.registerPotions();
+    }
     public static void initRegistries(){}
     public static void postInitRegistries(){}
 }

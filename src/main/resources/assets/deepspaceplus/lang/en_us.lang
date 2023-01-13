@@ -1,1 +1,7 @@
 tile.force_block.name=Force Block
+
+effect.null_field=Null Field
+potion.effect.null_field=Potion of Null Field
+splash_potion.effect.null_field=Splash Potion of Null Field
+lingering_potion.effect.null_field=Lingering Potion of Null Field
+tipped_arrow.effect.null_field=Arrow of Null Field

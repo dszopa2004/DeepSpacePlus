@@ -5,25 +5,27 @@ import com.snoops35.deepspaceplus.init.BlockInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.Mod;
 
-import java.util.ArrayList;
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-@Mod.EventBusSubscriber
 public class ForceBlock extends Block implements IHasModel
 {
+    public static final AxisAlignedBB FORCE_COLLISION_AABB = new AxisAlignedBB(2,2,2,2,2,2);
+
     public ForceBlock(String name, Material material)
     {
         super(material);
@@ -38,18 +40,31 @@ public class ForceBlock extends Block implements IHasModel
     }
 
     @Override
-    public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
-        world.scheduleUpdate(pos, this, tickRate(world));
+    public boolean isFullCube(IBlockState state) {
+        return true;
     }
 
     @Override
-    public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
-        for (EntityPlayer player : world.playerEntities) {
-            if (player.getDistanceSq(pos) <= 2500) { // 50 blocks
-                player.addPotionEffect(new PotionEffect(Potion.getPotionById(15), 200, 0));
-            }
-        }
-        world.scheduleUpdate(pos, this, tickRate(world));
+    public boolean isOpaqueCube(IBlockState state) { return true; }
+
+    @Override
+    public EnumPushReaction getMobilityFlag(IBlockState state) {
+        return EnumPushReaction.BLOCK;
+    }
+
+    @Nullable
+    @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) { return FORCE_COLLISION_AABB; }
+
+    @Override
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+    {
+        if (!(entityIn instanceof EntityPlayer)) return;
+        EntityPlayer player = (EntityPlayer) entityIn;
+        double pushAmount = 1;
+        double height = 0.5;
+
+        player.addVelocity(-player.motionX * pushAmount, height, -player.motionZ * pushAmount);
     }
 
     @Override
