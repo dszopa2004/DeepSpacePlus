@@ -3,6 +3,7 @@ package com.snoops35.deepspaceplus.core;
 import com.snoops35.deepspaceplus.DeepSpacePlus;
 import com.snoops35.deepspaceplus.init.BlockInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
+import com.snoops35.deepspaceplus.init.PotionInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -11,9 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -44,9 +43,9 @@ public class ForceBlock extends Block implements IHasModel
     {
         for (EntityPlayer player : world.playerEntities)
         {
-            if (player.getDistanceSq(pos) <= 2500)
-            { // 50 blocks
-                player.addPotionEffect(new PotionEffect(Potion.getPotionById(15), 200, 0));
+            if (player.getDistanceSq(pos) <= 2500) // 50 blocks
+            {
+                player.addPotionEffect(new PotionEffect(PotionInit.NULL_FIELD_EFFECT, 200, 0));
             }
         }
         world.scheduleUpdate(pos, this, tickRate(world));
