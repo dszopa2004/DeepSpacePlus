@@ -3,20 +3,14 @@ package com.snoops35.deepspaceplus.items;
 import com.snoops35.deepspaceplus.DeepSpacePlus;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.init.PotionInit;
-import com.snoops35.deepspaceplus.utils.ClientProxy;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public class StimulantItem extends Item implements IHasModel
@@ -26,8 +20,8 @@ public class StimulantItem extends Item implements IHasModel
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.REDSTONE);
-        this.setMaxDamage(3);
         setMaxStackSize(1);
+        this.setMaxDamage(3);
 
         ItemInit.ITEMS.add(this);
     }
