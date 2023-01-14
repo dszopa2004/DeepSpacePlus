@@ -16,9 +16,9 @@ public class PotionInit
     public static final PotionType NULL_FIELD = new PotionType("null_field", new PotionEffect[] {new PotionEffect(NULL_FIELD_EFFECT, 2400)}).setRegistryName("null_field");
     public static final PotionType LONG_NULL_FIELD = new PotionType("null_field", new PotionEffect[] {new PotionEffect(NULL_FIELD_EFFECT, 4800)}).setRegistryName("long_null_field");
 
-    public static final Potion POSITIVE_EFFECT = new PositiveEffectPotion("positive_effect", false, 8683390, 0, 0);
-    public static final PotionType POSITIVE_POTION = new PotionType("positive_effect", new PotionEffect[] {new PotionEffect(POSITIVE_EFFECT, 2400)}).setRegistryName("positive_effect");
-    public static final PotionType LONG_POSITIVE_POTION = new PotionType("positive_effect", new PotionEffect[] {new PotionEffect(POSITIVE_EFFECT, 4800)}).setRegistryName("long_positive_effect");
+    public static final Potion POSITIVE_EFFECT = new PositiveEffectPotion("aegis_aura", false, 8683390, 0, 0);
+    public static final PotionType POSITIVE_POTION = new PotionType("aegis_aura", new PotionEffect[] {new PotionEffect(POSITIVE_EFFECT, 2400)}).setRegistryName("aegis_aura");
+    public static final PotionType LONG_POSITIVE_POTION = new PotionType("aegis_aura", new PotionEffect[] {new PotionEffect(POSITIVE_EFFECT, 4800)}).setRegistryName("long_aegis_aura");
 
     public static void registerPotions()
     {

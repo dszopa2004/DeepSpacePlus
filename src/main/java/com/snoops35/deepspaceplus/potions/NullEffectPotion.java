@@ -25,7 +25,7 @@ public class NullEffectPotion extends Potion
     public void performEffect(EntityLivingBase entity, int amplifier)
     {
         entity.setSprinting(false);
-        //entity.setHealth(entity.getHealth() - 0.5f);
+        entity.setHealth(entity.getHealth() - 0.5f);
     }
 
     @Override
