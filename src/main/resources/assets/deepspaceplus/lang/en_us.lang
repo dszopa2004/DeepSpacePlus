@@ -1,3 +1,5 @@
+item.stimulant.name=Stimulant
+
 tile.force_block.name=Force Block
 
 effect.null_field=Null Field
