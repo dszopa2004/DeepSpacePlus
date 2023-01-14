@@ -1,6 +1,7 @@
 package com.snoops35.deepspaceplus.utils.handlers;
 
 import com.snoops35.deepspaceplus.init.BlockInit;
+import com.snoops35.deepspaceplus.init.FluidInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.init.PotionInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
@@ -49,7 +50,10 @@ public class RegistryHandler
     
     public static void preInitRegistries()
     {
+        FluidInit.registerFluids();
         PotionInit.registerPotions();
+
+        RenderHandler.registerCustomMeshesAndStates();
     }
     public static void initRegistries(){}
     public static void postInitRegistries(){}

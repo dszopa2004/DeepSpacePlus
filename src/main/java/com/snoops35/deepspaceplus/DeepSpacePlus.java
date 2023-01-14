@@ -3,6 +3,7 @@ package com.snoops35.deepspaceplus;
 import com.snoops35.deepspaceplus.utils.CommonProxy;
 import com.snoops35.deepspaceplus.utils.Reference;
 import com.snoops35.deepspaceplus.utils.handlers.RegistryHandler;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -16,6 +17,8 @@ public class DeepSpacePlus
 {
     @Mod.Instance
     public static DeepSpacePlus instance;
+
+    static { FluidRegistry.enableUniversalBucket();}
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
     public static CommonProxy proxy;
