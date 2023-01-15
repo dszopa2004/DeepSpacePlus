@@ -45,7 +45,7 @@ public class ForceBlock extends Block implements IHasModel
         {
             if (player.getDistanceSq(pos) <= 2500) // 50 blocks
             {
-                if(!player.isPotionActive(PotionInit.POSITIVE_EFFECT))
+                if(!player.isPotionActive(PotionInit.AEGIS_AURA))
                 {
                     player.addPotionEffect(new PotionEffect(PotionInit.NULL_FIELD_EFFECT, 200, 0));
                 }

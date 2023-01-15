@@ -7,6 +7,7 @@ import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
@@ -27,11 +28,16 @@ public class StimulantItem extends Item implements IHasModel
     }
 
     @Override
+    public EnumAction getItemUseAction(ItemStack stack) {
+        return EnumAction.BOW;
+    }
+
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
     {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
         itemstack.setItemDamage(itemstack.getItemDamage() + 1);
-        playerIn.addPotionEffect(new PotionEffect(PotionInit.POSITIVE_EFFECT, 1200, 0));
+        playerIn.addPotionEffect(new PotionEffect(PotionInit.AEGIS_AURA, 1200, 0));
 
         return new ActionResult<>(EnumActionResult.SUCCESS, itemstack);
     }
