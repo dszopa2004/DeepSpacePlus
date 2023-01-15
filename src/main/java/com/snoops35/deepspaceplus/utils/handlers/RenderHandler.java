@@ -1,7 +1,6 @@
 package com.snoops35.deepspaceplus.utils.handlers;
 
 import com.snoops35.deepspaceplus.init.BlockInit;
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,9 +22,11 @@ public class RenderHandler
             }
         });
 
-        ModelLoader.setCustomStateMapper(BlockInit.GELID_MENRIL_BLOCK, new StateMapperBase() {
+        ModelLoader.setCustomStateMapper(BlockInit.GELID_MENRIL_BLOCK, new StateMapperBase()
+        {
             @Override
-            protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+            protected ModelResourceLocation getModelResourceLocation(IBlockState state)
+            {
                 return new ModelResourceLocation("deepspaceplus:gelid_menril", "fluid");
             }
         });
