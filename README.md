@@ -6,7 +6,7 @@ This is an addon mod to the deepspaceDeepSpace, which is a Starmaker support mod
 
 Macrotech is a modpack for Minecraft version 1.12.2. The modpack takes inspiration from Engimatica 2 Expert, but without magic mods. It is a modpack focused soley on industry. The modpack is currently unreleased, but it will be on CurseForge and Technic when it is complete.
 
-# How to get the .jar file
+# How to get the .jar file for the mod
 
 Download link will eventually be provided on CurseForge, but until then, this is how to get the .jar file for the mod
 
