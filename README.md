@@ -13,7 +13,7 @@ Macrotech is a modpack for Minecraft version 1.12.2. The modpack takes inspirati
 In order to get the .jar file for the mod, download the .zip file for the mod source code and extract it to any location you prefer. Open the folder in command prompt and run the command: 'gradlew build'.
 After the command is done running, locate the build folder in the extracted folder. The .jar file will be inside the libs folder.
 
-### Linux: 
+### MacOS/Linux: 
 
 In order to get the .jar file for the mod, download the .zip file for the mod source code and extract it to any location you prefer. Open the folder in terminal and run the command: './gradlew build'.
 If you get an error saying that you do not have permission to run that command, run 'chmod +x gradlew' and then try to run './gradlew build'.
