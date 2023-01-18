@@ -8,6 +8,8 @@ Macrotech is a modpack for Minecraft version 1.12.2. The modpack takes inspirati
 
 # How to get the .jar file
 
+Download link will eventually be provided on CurseForge, but until then, this is how to get the .jar file for the mod
+
 ### Windows: 
 
 In order to get the .jar file for the mod, download the .zip file for the mod source code and extract it to any location you prefer. Open the folder in command prompt and run the command: 'gradlew build'.
