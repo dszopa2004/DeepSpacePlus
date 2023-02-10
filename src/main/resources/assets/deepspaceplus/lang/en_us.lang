@@ -1,5 +1,5 @@
 item.stimulant.name=Stimulant
-item.menril_gel.name=Menril Gel
+item.gelid_ambrosia.name=Gelid Ambrosia
 
 tile.force_block.name=Null Emitter
 
@@ -15,5 +15,5 @@ splash_potion.effect.aegis_aura=Splash Potion of Aegis Aura
 lingering_potion.effect.aegis_aura=Lingering Potion of Aegis Aura
 tipped_arrow.effect.aegis_aura=Arrow of Aegis Aura
 
-fluid.gelid_menril=Gelid Menril
+fluid.ambrosia=Ambrosia
 

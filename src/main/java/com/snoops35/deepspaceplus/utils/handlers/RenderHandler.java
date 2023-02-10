@@ -13,21 +13,21 @@ public class RenderHandler
 {
     public static void registerCustomMeshesAndStates()
     {
-        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(BlockInit.GELID_MENRIL_BLOCK), new ItemMeshDefinition()
+        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(BlockInit.AMBROSIA_BLOCK), new ItemMeshDefinition()
         {
             @Override
             public ModelResourceLocation getModelLocation(ItemStack stack)
             {
-                return new ModelResourceLocation("deepspaceplus:gelid_menril", "fluid");
+                return new ModelResourceLocation("deepspaceplus:ambrosia", "fluid");
             }
         });
 
-        ModelLoader.setCustomStateMapper(BlockInit.GELID_MENRIL_BLOCK, new StateMapperBase()
+        ModelLoader.setCustomStateMapper(BlockInit.AMBROSIA_BLOCK, new StateMapperBase()
         {
             @Override
             protected ModelResourceLocation getModelResourceLocation(IBlockState state)
             {
-                return new ModelResourceLocation("deepspaceplus:gelid_menril", "fluid");
+                return new ModelResourceLocation("deepspaceplus:ambrosia", "fluid");
             }
         });
     }

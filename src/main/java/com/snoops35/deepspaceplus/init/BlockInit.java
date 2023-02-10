@@ -13,5 +13,5 @@ public class BlockInit
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	public static final Block FORCE_BLOCK = new ForceBlock("force_block", Material.GROUND);
-	public static final Block GELID_MENRIL_BLOCK = new BlockFluid("gelid_menril", FluidInit.GELID_MENRIL, Material.WATER);
+	public static final Block AMBROSIA_BLOCK = new BlockFluid("ambrosia", FluidInit.AMBROSIA, Material.WATER);
 }
