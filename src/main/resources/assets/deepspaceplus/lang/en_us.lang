@@ -1,5 +1,8 @@
 item.stimulant.name=Stimulant
 item.gelid_ambrosia.name=Gelid Ambrosia
+item.empty_syringe.name=Empty Syringe
+item.syringe_needle.name=Syringe Needle
+item.syringe_top.name=Syringe Top
 
 tile.force_block.name=Null Emitter
 
@@ -16,4 +19,5 @@ lingering_potion.effect.aegis_aura=Lingering Potion of Aegis Aura
 tipped_arrow.effect.aegis_aura=Arrow of Aegis Aura
 
 fluid.ambrosia=Ambrosia
+fluid.caelum=Caelum
 

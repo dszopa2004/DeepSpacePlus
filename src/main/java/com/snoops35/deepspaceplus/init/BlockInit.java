@@ -14,4 +14,5 @@ public class BlockInit
 	
 	public static final Block FORCE_BLOCK = new ForceBlock("force_block", Material.GROUND);
 	public static final Block AMBROSIA_BLOCK = new BlockFluid("ambrosia", FluidInit.AMBROSIA, Material.WATER);
+	public static final Block CAELUM_BLOCK = new BlockFluid("caelum", FluidInit.CAELUM, Material.WATER);
 }

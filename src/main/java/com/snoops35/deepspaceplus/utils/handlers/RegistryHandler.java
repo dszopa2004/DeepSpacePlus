@@ -26,6 +26,7 @@ public class RegistryHandler
     public static void onBlockRegister(RegistryEvent.Register<Block> event)
     {
         event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+        RenderHandler.registerCustomMeshesAndStates();
     }
 
     @SubscribeEvent
@@ -52,8 +53,6 @@ public class RegistryHandler
     {
         FluidInit.registerFluids();
         PotionInit.registerPotions();
-
-        RenderHandler.registerCustomMeshesAndStates();
     }
     public static void initRegistries(){}
     public static void postInitRegistries(){}
