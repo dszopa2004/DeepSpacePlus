@@ -5,6 +5,7 @@ item.syringe_needle.name=Syringe Needle
 item.syringe_top.name=Syringe Top
 
 tile.force_block.name=Null Emitter
+tile.mud.name=Mud
 
 effect.null_field=Null Field
 potion.effect.null_field=Potion of Null Field
