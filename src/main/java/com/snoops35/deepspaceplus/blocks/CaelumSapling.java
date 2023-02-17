@@ -5,6 +5,8 @@ import com.snoops35.deepspaceplus.init.BlockInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import com.snoops35.deepspaceplus.worldgen.WorldGenTreesCaelum;
+import com.snoops35.deepspaceplus.worldgen.WorldGenTreesCaelumThree;
+import com.snoops35.deepspaceplus.worldgen.WorldGenTreesCaelumTwo;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
@@ -66,12 +68,38 @@ public class CaelumSapling extends BlockBush implements IHasModel, IGrowable
 
     public void generateTree(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
+        int leaves = generateRandomTreeType();
         if (!TerrainGen.saplingGrowTree(worldIn, rand, pos)) return;
-        WorldGenerator worldgenerator = new WorldGenTreesCaelum(true);
 
-        worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
+        switch (leaves)
+        {
+            case 0:
+                WorldGenerator worldgeneratorone = new WorldGenTreesCaelum(true);
+                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
+                worldgeneratorone.generate(worldIn, rand, pos);
+                break;
 
-        worldgenerator.generate(worldIn, rand, pos);
+            case 1:
+                WorldGenerator worldgeneratortwo = new WorldGenTreesCaelumTwo(true);
+                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
+                worldgeneratortwo.generate(worldIn, rand, pos);
+                break;
+
+            case 2:
+                WorldGenerator worldgeneratorthree = new WorldGenTreesCaelumThree(true);
+                worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 4);
+                worldgeneratorthree.generate(worldIn, rand, pos);
+                break;
+        }
+    }
+
+    public int generateRandomTreeType()
+    {
+        int min = 0;
+        int max = 2;
+        int rand_leaves = (int)Math.floor(Math.random() * (max - min + 1) + min);
+
+        return rand_leaves;
     }
 
     @Override

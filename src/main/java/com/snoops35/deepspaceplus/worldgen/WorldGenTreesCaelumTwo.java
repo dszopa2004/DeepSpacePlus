@@ -9,17 +9,16 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraftforge.common.IPlantable;
 
 import java.util.Random;
 
-public class WorldGenTreesCaelum extends WorldGenAbstractTree
+public class WorldGenTreesCaelumTwo extends WorldGenAbstractTree
 {
     private IBlockState TRUNK = BlockInit.CAELUM_LOG.getDefaultState();
-    private IBlockState LEAF_ONE = BlockInit.CAELUM_LEAF_ONE.getDefaultState().withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
+    private IBlockState LEAF_TWO = BlockInit.CAELUM_LEAF_TWO.getDefaultState().withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
     private final int minTreeHeight = 7;
 
-    public WorldGenTreesCaelum(boolean parShouldNotify)
+    public WorldGenTreesCaelumTwo(boolean parShouldNotify)
     {
         super(parShouldNotify);
     }
@@ -80,7 +79,7 @@ public class WorldGenTreesCaelum extends WorldGenAbstractTree
                 BlockPos down = position.down();
                 IBlockState state = worldIn.getBlockState(down);
 
-                if (state.getBlock().canSustainPlant(state, worldIn, down, net.minecraft.util.EnumFacing.UP, (net.minecraft.block.BlockSapling)Blocks.SAPLING) && position.getY() < worldIn.getHeight() - i - 1)
+                if (state.getBlock().canSustainPlant(state, worldIn, down, EnumFacing.UP, (net.minecraft.block.BlockSapling)Blocks.SAPLING) && position.getY() < worldIn.getHeight() - i - 1)
                 {
                     state.getBlock().onPlantGrow(state, worldIn, down, position);
                     int i3 = rand.nextInt(2);
@@ -106,7 +105,7 @@ public class WorldGenTreesCaelum extends WorldGenAbstractTree
 
                                     if (state.getBlock().canBeReplacedByLeaves(state, worldIn, blockpos))
                                     {
-                                        this.setBlockAndNotifyAdequately(worldIn, blockpos, LEAF_ONE);
+                                        this.setBlockAndNotifyAdequately(worldIn, blockpos, LEAF_TWO);
                                     }
                                 }
                             }
@@ -179,7 +178,7 @@ public class WorldGenTreesCaelum extends WorldGenAbstractTree
 
                         if (state.getBlock().isAir(state, parWorld, blockPos) || state.getBlock().isLeaves(state, parWorld, blockPos))
                         {
-                            setBlockAndNotifyAdequately(parWorld, blockPos, LEAF_ONE);
+                            setBlockAndNotifyAdequately(parWorld, blockPos, LEAF_TWO);
                         }
                     }
                 }
