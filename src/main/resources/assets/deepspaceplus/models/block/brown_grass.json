@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "deepspaceplus:blocks/brown_grass_block_top",
+    "side": "deepspaceplus:blocks/brown_grass_block_side"
+  }
+}

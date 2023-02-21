@@ -12,6 +12,7 @@ tile.caelum_leaves_2.name=Caelum Leaves
 tile.caelum_leaves_3.name=Caelum Leaves
 tile.caelum_sapling.name=Caelum Sapling
 tile.caelum_planks.name=Caelum Planks
+tile.brown_grass.name=Brown Grass
 
 effect.null_field=Null Field
 potion.effect.null_field=Potion of Null Field

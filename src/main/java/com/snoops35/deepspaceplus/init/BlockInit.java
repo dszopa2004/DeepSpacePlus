@@ -13,6 +13,7 @@ public class BlockInit
 	
 	public static final Block FORCE_BLOCK = new ForceBlock("force_block", Material.GROUND);
 	public static final Block MUD_BLOCK = new BlockBase("mud", Material.GROUND);
+	public static final Block BROWN_GRASS = new BrownGrass("brown_grass", Material.GRASS);
 
 	public static final Block CAELUM_PLANKS = new CaelumPlanks("caelum_planks", Material.WOOD);
 	public static final Block CAELUM_LOG = new CaelumLog("caelum_log");

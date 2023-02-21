@@ -5,13 +5,16 @@ import com.snoops35.deepspaceplus.init.FluidInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.init.PotionInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
+import com.snoops35.deepspaceplus.worldgen.TreeGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class RegistryHandler
@@ -54,6 +57,10 @@ public class RegistryHandler
         FluidInit.registerFluids();
         PotionInit.registerPotions();
     }
-    public static void initRegistries(){}
+    public static void initRegistries()
+    {
+        IWorldGenerator worldGenerator = new TreeGen();
+        GameRegistry.registerWorldGenerator(worldGenerator, 0);
+    }
     public static void postInitRegistries(){}
 }
