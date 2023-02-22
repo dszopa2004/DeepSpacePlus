@@ -17,7 +17,6 @@ public class WorldGenTreesCaelumTwo extends WorldGenAbstractTree
 {
     private IBlockState TRUNK = BlockInit.CAELUM_LOG.getDefaultState();
     private IBlockState LEAF_TWO = BlockInit.CAELUM_LEAF_TWO.getDefaultState().withProperty(BlockLeaves.CHECK_DECAY, Boolean.valueOf(false));
-    private static int DIM_ID = -1101;
     private final int minTreeHeight = 7;
 
     public WorldGenTreesCaelumTwo(boolean parShouldNotify)

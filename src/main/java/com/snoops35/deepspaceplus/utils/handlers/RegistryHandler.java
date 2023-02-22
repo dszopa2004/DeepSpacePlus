@@ -7,8 +7,10 @@ import com.snoops35.deepspaceplus.init.PotionInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import com.snoops35.deepspaceplus.worldgen.TreeGen;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -30,6 +32,9 @@ public class RegistryHandler
     {
         event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
         RenderHandler.registerCustomMeshesAndStates();
+
+        ModelResourceLocation grass_block_model = new ModelResourceLocation("deepspaceplus:brown_grass", "normal");
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BlockInit.BROWN_GRASS), 0, grass_block_model);
     }
 
     @SubscribeEvent

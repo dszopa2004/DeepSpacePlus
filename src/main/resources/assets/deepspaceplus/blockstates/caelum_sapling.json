@@ -1,13 +1,6 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "deepspaceplus:caelum_sapling",
-    "uvlock": true
-  },
   "variants": {
-    "normal": [{ }],
-    "inventory": [{ }],
-    "stage=0":[{ }],
-    "stage=1":[{ }]
+    "stage=0": { "model": "deepspaceplus:caelum_sapling" },
+    "stage=1": { "model": "deepspaceplus:caelum_sapling" }
   }
 }
