@@ -1,0 +1,16 @@
+[
+{
+  "modid": "deepspaceplus",
+  "name": "Deep Space Plus Mod",
+  "description": "This is an extension mod for a modpack.",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/dszopa2004/DeepSpacePlus",
+  "updateUrl": "",
+  "authorList": ["Snoops35", "Seere_"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

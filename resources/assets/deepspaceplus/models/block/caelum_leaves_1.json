@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "deepspaceplus:blocks/caelum_leaves_1"
+  }
+}

@@ -1,0 +1,32 @@
+item.stimulant.name=Stimulant
+item.gelid_ambrosia.name=Gelid Ambrosia
+item.empty_syringe.name=Empty Syringe
+item.syringe_needle.name=Syringe Needle
+item.syringe_top.name=Syringe Top
+
+tile.force_block.name=Null Emitter
+tile.mud.name=Mud
+tile.caelum_log.name=Caelum Wood
+tile.caelum_log_sides.name=Caelum Wood
+tile.caelum_leaves_1.name=Caelum Leaves
+tile.caelum_leaves_2.name=Caelum Leaves
+tile.caelum_leaves_3.name=Caelum Leaves
+tile.caelum_sapling.name=Caelum Sapling
+tile.caelum_planks.name=Caelum Planks
+tile.brown_grass.name=Brown Grass
+
+effect.null_field=Null Field
+potion.effect.null_field=Potion of Null Field
+splash_potion.effect.null_field=Splash Potion of Null Field
+lingering_potion.effect.null_field=Lingering Potion of Null Field
+tipped_arrow.effect.null_field=Arrow of Null Field
+
+effect.aegis_aura=Aegis Aura
+potion.effect.aegis_aura=Potion of Aegis Aura
+splash_potion.effect.aegis_aura=Splash Potion of Aegis Aura
+lingering_potion.effect.aegis_aura=Lingering Potion of Aegis Aura
+tipped_arrow.effect.aegis_aura=Arrow of Aegis Aura
+
+fluid.ambrosia=Ambrosia
+fluid.caelum=Caelum Sap
+
