@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "deepspaceplus:blocks/caelum_log_side",
-    "side": "deepspaceplus:blocks/caelum_log_side"
-  }
-}

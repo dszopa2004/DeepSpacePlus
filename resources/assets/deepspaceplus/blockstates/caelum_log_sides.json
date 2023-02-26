@@ -1,9 +1,0 @@
-{
-  "forge_marker": 1,
-  "variants": {
-    "axis=y":  { "model": "deepspaceplus:caelum_log_sides" },
-    "axis=z":   { "model": "deepspaceplus:caelum_log_sides", "x": 90 },
-    "axis=x":   { "model": "deepspaceplus:caelum_log_sides", "x": 90, "y": 90 },
-    "axis=none": { "model": "deepspaceplus:caelum_log_sides" }
-  }
-}
