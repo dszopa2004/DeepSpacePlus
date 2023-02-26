@@ -61,11 +61,11 @@ public class RegistryHandler
     {
         FluidInit.registerFluids();
         PotionInit.registerPotions();
+
+        TreeGen.init();
     }
-    public static void initRegistries()
-    {
-        IWorldGenerator worldGenerator = new TreeGen();
-        GameRegistry.registerWorldGenerator(worldGenerator, 0);
+    public static void initRegistries() {
+
     }
     public static void postInitRegistries(){}
 }

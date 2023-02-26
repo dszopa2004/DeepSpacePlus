@@ -19,6 +19,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.common.IFuelHandler;
 
+import java.util.Random;
+
 public class CaelumLog extends BlockLog implements IHasModel, IFuelHandler
 {
     public CaelumLog(String name)
@@ -31,6 +33,11 @@ public class CaelumLog extends BlockLog implements IHasModel, IFuelHandler
 
         BlockInit.BLOCKS.add(this);
         ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+    }
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(BlockInit.CAELUM_LOG);
     }
 
     @Override

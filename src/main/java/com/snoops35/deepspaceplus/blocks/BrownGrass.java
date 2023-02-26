@@ -7,16 +7,25 @@ import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.IPlantable;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class BrownGrass extends Block implements IHasModel, IGrowable
@@ -26,9 +35,10 @@ public class BrownGrass extends Block implements IHasModel, IGrowable
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setHardness(0.6f);
+        setHardness(0.5f);
         setSoundType(SoundType.PLANT);
         setCreativeTab(CreativeTabs.REDSTONE);
+        setHarvestLevel("shovel", 0);
 
         BlockInit.BLOCKS.add(this);
         ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
@@ -50,7 +60,7 @@ public class BrownGrass extends Block implements IHasModel, IGrowable
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Blocks.DIRT.getItemDropped(Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT), rand, fortune);
+        return Item.getItemFromBlock(BlockInit.MUD_BLOCK);
     }
 
     public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
@@ -107,6 +117,25 @@ public class BrownGrass extends Block implements IHasModel, IGrowable
                 ++j;
             }
         }
+    }
+
+    @Override
+    public boolean addLandingEffects(IBlockState state, WorldServer world, BlockPos blockPosition, IBlockState iblockstate, EntityLivingBase entity, int numberOfParticles) {
+        return true;
+    }
+
+
+    @Override
+    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, ParticleManager manager) { return true; }
+
+    @Override
+    public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager) {
+        return true;
+    }
+
+    @Override
+    public boolean addRunningEffects(IBlockState state, World world, BlockPos pos, Entity entity) {
+        return true;
     }
 
     @Override
