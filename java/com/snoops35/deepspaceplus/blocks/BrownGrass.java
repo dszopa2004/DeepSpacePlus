@@ -7,15 +7,22 @@ import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.IPlantable;
 
 import javax.annotation.Nullable;
@@ -110,6 +117,25 @@ public class BrownGrass extends Block implements IHasModel, IGrowable
                 ++j;
             }
         }
+    }
+
+    @Override
+    public boolean addLandingEffects(IBlockState state, WorldServer world, BlockPos blockPosition, IBlockState iblockstate, EntityLivingBase entity, int numberOfParticles) {
+        return true;
+    }
+
+
+    @Override
+    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, ParticleManager manager) { return true; }
+
+    @Override
+    public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager) {
+        return true;
+    }
+
+    @Override
+    public boolean addRunningEffects(IBlockState state, World world, BlockPos pos, Entity entity) {
+        return true;
     }
 
     @Override
