@@ -120,25 +120,6 @@ public class BrownGrass extends Block implements IHasModel, IGrowable
     }
 
     @Override
-    public boolean addLandingEffects(IBlockState state, WorldServer world, BlockPos blockPosition, IBlockState iblockstate, EntityLivingBase entity, int numberOfParticles) {
-        return true;
-    }
-
-
-    @Override
-    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, ParticleManager manager) { return true; }
-
-    @Override
-    public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager) {
-        return true;
-    }
-
-    @Override
-    public boolean addRunningEffects(IBlockState state, World world, BlockPos pos, Entity entity) {
-        return true;
-    }
-
-    @Override
     public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing facing, IPlantable plantable) {
         Block plant = plantable.getPlant(world, pos.offset(facing)).getBlock();
         return plant instanceof BlockBush || super.canSustainPlant(state, world, pos, facing, plantable);
