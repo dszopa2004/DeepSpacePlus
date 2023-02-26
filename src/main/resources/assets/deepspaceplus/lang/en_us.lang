@@ -7,6 +7,7 @@ item.syringe_top.name=Syringe Top
 tile.force_block.name=Null Emitter
 tile.mud.name=Mud
 tile.caelum_log.name=Caelum Wood
+tile.caelum_log_sides.name=Caelum Wood
 tile.caelum_leaves_1.name=Caelum Leaves
 tile.caelum_leaves_2.name=Caelum Leaves
 tile.caelum_leaves_3.name=Caelum Leaves

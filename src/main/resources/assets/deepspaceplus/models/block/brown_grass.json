@@ -1,8 +1,25 @@
 {
-  "parent": "block/cube_column",
+  "parent": "block/cube_all",
   "textures": {
-    "end": "deepspaceplus:blocks/brown_grass_block_top",
-    "side": "deepspaceplus:blocks/brown_grass_block_side",
-    "bottom": "deepspaceplus:blocks/mud"
-  }
+    "down": "deepspaceplus:blocks/mud",
+    "up": "deepspaceplus:blocks/brown_grass_block_top",
+    "north": "deepspaceplus:blocks/brown_grass_block_side",
+    "east": "deepspaceplus:blocks/brown_grass_block_side",
+    "south": "deepspaceplus:blocks/brown_grass_block_side",
+    "west": "deepspaceplus:blocks/brown_grass_block_side"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "down": {"texture": "#down", "cullface": "down"},
+        "up": {"texture": "#up", "cullface": "up"},
+        "north": {"texture": "#north", "cullface": "north"},
+        "east": {"texture": "#east", "cullface": "east"},
+        "south": {"texture": "#south", "cullface": "south"},
+        "west": {"texture": "#west", "cullface": "west"}
+      }
+    }
+  ]
 }
