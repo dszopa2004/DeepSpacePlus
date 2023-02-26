@@ -6,7 +6,8 @@
     "north": "deepspaceplus:blocks/brown_grass_block_side",
     "east": "deepspaceplus:blocks/brown_grass_block_side",
     "south": "deepspaceplus:blocks/brown_grass_block_side",
-    "west": "deepspaceplus:blocks/brown_grass_block_side"
+    "west": "deepspaceplus:blocks/brown_grass_block_side",
+    "particle": "deepspaceplus:blocks/mud"
   },
   "elements": [
     {
