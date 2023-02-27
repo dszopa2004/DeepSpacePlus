@@ -22,6 +22,7 @@ public class BlockInit
 	public static final Block CAELUM_LEAF_TWO = new CaelumLeaves("caelum_leaves_2");
 	public static final Block CAELUM_LEAF_THREE = new CaelumLeaves("caelum_leaves_3");
 	public static final Block CAELUM_SAPLING = new CaelumSapling("caelum_sapling");
+	public static final Block BLUE_SHROOM = new BlueShroom("blue_shroom", Material.GLASS, false);
 
 	public static final Block AMBROSIA_BLOCK = new BlockFluid("ambrosia", FluidInit.AMBROSIA, Material.WATER);
 	public static final Block CAELUM_BLOCK = new BlockFluid("caelum", FluidInit.CAELUM, Material.WATER);
