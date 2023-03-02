@@ -5,6 +5,7 @@ import com.snoops35.deepspaceplus.init.BlockInit;
 import com.snoops35.deepspaceplus.init.ItemInit;
 import com.snoops35.deepspaceplus.utils.IHasModel;
 import net.minecraft.block.BlockBreakable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -26,6 +27,7 @@ public class BlueShroom extends BlockBreakable implements IHasModel
         setCreativeTab(CreativeTabs.REDSTONE);
         setHardness(1.0f);
         setLightLevel(10f);
+        setSoundType(SoundType.SLIME);
 
         BlockInit.BLOCKS.add(this);
         ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
