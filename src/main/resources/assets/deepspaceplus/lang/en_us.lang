@@ -15,6 +15,7 @@ tile.caelum_sapling.name=Caelum Sapling
 tile.caelum_planks.name=Caelum Planks
 tile.brown_grass.name=Brown Grass
 tile.blue_shroom.name=Blue Shroom
+tile.blue_plant.name=Blue Plant
 
 effect.null_field=Null Field
 potion.effect.null_field=Potion of Null Field

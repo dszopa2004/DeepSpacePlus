@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "deepspaceplus:blocks/blue_plant_bottom"
+  }
+}

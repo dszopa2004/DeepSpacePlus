@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "half=lower,variant=blue_plant": { "model": "deepspaceplus:blue_plant_lower" },
+    "half=upper,variant=blue_plant": { "model": "deepspaceplus:blue_plant_upper" },
+    "facing=east,half=lower,variant=blue_plant": { "model": "deepspaceplus:blue_plant_lower" },
+    "facing=east,half=upper,variant=blue_plant": { "model": "deepspaceplus:blue_plant_upper", "y": 180 },
+    "facing=north,half=lower,variant=blue_plant": { "model": "deepspaceplus:blue_plant_lower" },
+    "facing=north,half=upper,variant=blue_plant": { "model": "deepspaceplus:blue_plant_upper", "y": 270 },
+    "facing=south,half=lower,variant=blue_plant": { "model": "deepspaceplus:blue_plant_lower" },
+    "facing=south,half=upper,variant=blue_plant": { "model": "deepspaceplus:blue_plant_upper", "y": 90 },
+    "facing=west,half=lower,variant=blue_plant": { "model": "deepspaceplus:blue_plant_lower" },
+    "facing=west,half=upper,variant=blue_plant": { "model": "deepspaceplus:blue_plant_upper", "y": 270 }
+  }
+}
